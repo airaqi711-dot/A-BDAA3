@@ -11,7 +11,7 @@ import {createClient} from 'https://esm.sh/@supabase/supabase-js@2';
 // ضع بيانات مشروع Supabase هنا (مفتاح publishable/anon فقط، وليس service_role)
 const SUPABASE_URL='https://fqqbqeopisbrcfpjkfad.supabase.co';
 const SUPABASE_ANON_KEY='sb_publishable_NK20CJCn-y62ySKqD-Lsrg_YqBBJLqg';
-const configured=!SUPABASE_URL.startsWith('YOUR_')&&!SUPABASE_ANON_KEY.startsWith('YOUR_');
+const configured=!SUPABASE_URL.startsWith('https://fqqbqeopisbrcfpjkfad.supabase.co_')&&!SUPABASE_ANON_KEY.startsWith('sb_publishable_NK20CJCn-y62ySKqD-Lsrg_YqBBJLqg_');
 const db=configured?createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
 const $=id=>document.getElementById(id);
 const showMessage=(id,msg,type='error')=>{$(id).textContent=msg;$(id).className=msg?'message '+type:''};
